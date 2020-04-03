@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>To Do List</title>
+
+        <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+
+        <link href="./assets/styles.css" rel="stylesheet" type="text/css" />
+
+
+    </head>
+    <!--we are able to include the stylesheet in such a manner because of the middleware included in app.js-->
+    <body>
+
+        <div id="todo-table">
+            <form>
+                <!--when the user wants to add in the new list:
+                input: to type what they want to add... button : when they want to add to the list-->
+
+                <input type="text" name="item" placeholder="Add new item..." required/>
+                <button type="submit">Add Item</button>
+            </form>
+            <ul id = "list">
+                <% for(var i=0;i< todos.length ; i++ ){ %>
+                    <li><%= todos[i].item %></li>
+              <%  } %>
+
+
+            </ul>
+        </div>
+<script type="text/javascript" src="./assets/todo-list.js"></script>
+    </body>
+</html>
